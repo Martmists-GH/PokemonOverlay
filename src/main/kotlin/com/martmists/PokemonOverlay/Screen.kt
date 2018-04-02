@@ -250,6 +250,12 @@ class PokemonView: View() {
             setPBall("Poke Ball")
             setPLevel(5)
         })
+        setPokemon(1, Pokemon(384).apply {
+            setPBall("Love Ball")
+            setPLevel(100)
+            setPNick("Ponty")
+            setPItem("Oran Berry")
+        })
     }
 
     private fun update() {
@@ -267,7 +273,7 @@ class PokemonView: View() {
             nickname.text = "${pokemon.nickname} Lv.${pokemon.level}"
             itemname.text = pokemon.item
 
-            itemicon.image = getImage(if (empty.item == "") "http://via.placeholder.com/24x24/f4f4f4/f4f4f4" else "https://cdn.bulbagarden.net/upload/d/d6/Held_icon_VII.png")
+            itemicon.image = getImage(if (pokemon.item == "") "http://via.placeholder.com/24x24/f4f4f4/f4f4f4" else "https://cdn.bulbagarden.net/upload/d/d6/Held_icon_VII.png")
         }
     }
 
