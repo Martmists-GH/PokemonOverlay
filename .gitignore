@@ -1,0 +1,7 @@
+.gradle/
+.idea/
+build/
+out/
+Bulbapedia-20180402123409.xml
+convert.py
+*.iml
