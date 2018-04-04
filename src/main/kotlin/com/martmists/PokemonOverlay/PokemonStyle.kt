@@ -1,3 +1,5 @@
+package com.martmists.PokemonOverlay
+
 import javafx.scene.layout.BorderStrokeStyle
 import javafx.scene.paint.Color
 import tornadofx.*

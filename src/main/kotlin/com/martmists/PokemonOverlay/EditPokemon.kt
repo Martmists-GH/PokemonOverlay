@@ -1,3 +1,5 @@
+package com.martmists.PokemonOverlay
+
 import javafx.beans.property.SimpleStringProperty
 import tornadofx.*
 

@@ -1,3 +1,5 @@
+package com.martmists.PokemonOverlay
+
 import javafx.application.Application
 
 fun main(args: Array<String>) {
