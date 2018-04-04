@@ -1,3 +1,5 @@
+import javafx.scene.layout.BorderStrokeStyle
+import javafx.scene.paint.Color
 import tornadofx.*
 
 class PokemonStyle: Stylesheet() {
@@ -17,27 +19,48 @@ class PokemonStyle: Stylesheet() {
 
         val row1 by cssclass()
         val row2 by cssclass()
+
+        val Type1 by cssclass()
+        val Type2 by cssclass()
+
+        val XButton by cssclass()
+        val PlusButton by cssclass()
+        val LevelPlusButton by cssclass()
+        val LevelMinusButton by cssclass()
+        val EditButton by cssclass()
+
+        val EditApp by cssclass()
+        val EditPokemon by cssclass()
+        val EditNickname by cssclass()
+        val EditLevel by cssclass()
+        val EditBall by cssclass()
+        val EditItem by cssclass()
+        val EditSave by cssclass()
     }
 
     init {
         App {
-            prefHeight = 130.px
-            prefWidth = 930.px
+            prefHeight = 205.px
+            prefWidth = 1305.px
+            padding = box(40.px)
             // backgroundColor += Color.RED
         }
 
         Column {
-            prefWidth = 300.px
+            prefWidth = 405.px
             // backgroundColor += Color.BLUE
         }
 
         Pokemon {
-            prefWidth = 200.px
+            prefWidth = 305.px
             prefHeight = 60.px
             // backgroundColor += Color.WHITE
         }
 
         Inner {
+            borderStyle += BorderStrokeStyle.SOLID
+            borderWidth += box(2.px)
+            borderRadius += box(40.px)
             // backgroundColor += Color.GREEN
         }
 
@@ -46,24 +69,9 @@ class PokemonStyle: Stylesheet() {
             scaleY = 1.75
         }
 
-        Nickname {
-            scaleX = 1.0
-            scaleY = 1.0
-        }
-
-        ItemIcon {
-            scaleX = 1.0
-            scaleY = 1.0
-        }
-
         ItemName {
             scaleX = 0.8
             scaleY = 0.8
-        }
-
-        PokeBall {
-            scaleY = 1.0
-            scaleX = 1.0
         }
 
         row1 {
@@ -72,6 +80,31 @@ class PokemonStyle: Stylesheet() {
 
         row2 {
             padding = box(0.px, 0.px, 0.px, 100.px)
+        }
+
+        s(XButton, PlusButton, EditButton) {
+            scaleX = 0.75
+            scaleY = 0.75
+        }
+
+        XButton {
+            baseColor = Color.RED
+        }
+
+        PlusButton {
+            baseColor = Color.GREEN
+        }
+
+        s(EditApp, EditPokemon, EditNickname, EditLevel, EditBall, EditItem, EditSave) {
+            prefWidth = 360.px
+        }
+
+        s(button, comboBox) {
+            backgroundRadius += box(15.px)
+        }
+
+        comboBox {
+            prefWidth = 255.px
         }
     }
 }

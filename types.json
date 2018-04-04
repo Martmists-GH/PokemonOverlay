@@ -1,1 +1,20 @@
-{"Normal": "https://cdn.bulbagarden.net/upload/3/39/NormalIC_Big.png", "Fire": "https://cdn.bulbagarden.net/upload/2/26/FireIC_Big.png", "Fighting": "https://cdn.bulbagarden.net/upload/6/67/FightingIC_Big.png", "Water": "https://cdn.bulbagarden.net/upload/5/56/WaterIC_Big.png", "Flying": "https://cdn.bulbagarden.net/upload/c/cb/FlyingIC_Big.png", "Grass": "https://cdn.bulbagarden.net/upload/7/74/GrassIC_Big.png", "Poison": "https://cdn.bulbagarden.net/upload/3/3d/PoisonIC_Big.png", "Electric": "https://cdn.bulbagarden.net/upload/4/4a/ElectricIC_Big.png", "Ground": "https://cdn.bulbagarden.net/upload/8/8f/GroundIC_Big.png", "Psychic": "https://cdn.bulbagarden.net/upload/6/60/PsychicIC_Big.png", "Rock": "https://cdn.bulbagarden.net/upload/c/ce/RockIC_Big.png", "Ice": "https://cdn.bulbagarden.net/upload/6/6f/IceIC_Big.png", "Bug": "https://cdn.bulbagarden.net/upload/c/c8/BugIC_Big.png", "Dragon": "https://cdn.bulbagarden.net/upload/4/48/DragonIC_Big.png", "Ghost": "https://cdn.bulbagarden.net/upload/7/73/GhostIC_Big.png", "Dark": "https://cdn.bulbagarden.net/upload/5/56/DarkIC_Big.png", "Steel": "https://cdn.bulbagarden.net/upload/d/d4/SteelIC_Big.png", "Fairy": "https://cdn.bulbagarden.net/upload/7/73/FairyIC_Big.png"}
+{
+  "Normal": "https://cdn.bulbagarden.net/upload/3/39/NormalIC_Big.png",
+  "Fire": "https://cdn.bulbagarden.net/upload/2/26/FireIC_Big.png",
+  "Fighting": "https://cdn.bulbagarden.net/upload/6/67/FightingIC_Big.png",
+  "Water": "https://cdn.bulbagarden.net/upload/5/56/WaterIC_Big.png",
+  "Flying": "https://cdn.bulbagarden.net/upload/c/cb/FlyingIC_Big.png",
+  "Grass": "https://cdn.bulbagarden.net/upload/7/74/GrassIC_Big.png",
+  "Poison": "https://cdn.bulbagarden.net/upload/3/3d/PoisonIC_Big.png",
+  "Electric": "https://cdn.bulbagarden.net/upload/4/4a/ElectricIC_Big.png",
+  "Ground": "https://cdn.bulbagarden.net/upload/8/8f/GroundIC_Big.png",
+  "Psychic": "https://cdn.bulbagarden.net/upload/6/60/PsychicIC_Big.png",
+  "Rock": "https://cdn.bulbagarden.net/upload/c/ce/RockIC_Big.png",
+  "Ice": "https://cdn.bulbagarden.net/upload/6/6f/IceIC_Big.png",
+  "Bug": "https://cdn.bulbagarden.net/upload/c/c8/BugIC_Big.png",
+  "Dragon": "https://cdn.bulbagarden.net/upload/4/48/DragonIC_Big.png",
+  "Ghost": "https://cdn.bulbagarden.net/upload/7/73/GhostIC_Big.png",
+  "Dark": "https://cdn.bulbagarden.net/upload/5/56/DarkIC_Big.png",
+  "Steel": "https://cdn.bulbagarden.net/upload/d/d4/SteelIC_Big.png",
+  "Fairy": "https://cdn.bulbagarden.net/upload/7/73/FairyIC_Big.png"
+}

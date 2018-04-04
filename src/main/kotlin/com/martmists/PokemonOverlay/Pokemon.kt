@@ -28,21 +28,19 @@ class Pokemon(id: Any) {
                 types.add(typesDB.getString(type.toString()))
             }
 
+            if (types.size == 1){
+                types.add("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")
+            }
+
             name = json.getString("name")
             nickname = name
             icon = json.getString("url")
         } else {
-            icon = "http://via.placeholder.com/24x24/f4f4f4/f4f4f4"
-            ball = "http://via.placeholder.com/24x24/f4f4f4/f4f4f4"
+            icon = "http://via.placeholder.com/1x1/f4f4f4/f4f4f4"
+            ball = "http://via.placeholder.com/1x1/f4f4f4/f4f4f4"
+            types.add("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")
+            types.add("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")
         }
-    }
-
-    fun inc(){
-        level += 1
-    }
-
-    fun dec(){
-        level -= 1
     }
 
     fun setPNick(name: String){
@@ -74,6 +72,5 @@ fun getAllPokemon(): Array<Pokemon>{
 }
 
 fun getAllBalls(): List<String>{
-    val l = mutableListOf<String>()
     return ballsDB.keys().asSequence().toList()
 }
