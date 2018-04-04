@@ -63,7 +63,7 @@ class Pokemon(id: Any) {
 }
 
 
-fun getAllpokemon(): Array<Pokemon>{
+fun getAllPokemon(): Array<Pokemon>{
     val allPokemon = mutableListOf<Pokemon>()
 
     for (key in pokemonDB.keys()){
@@ -71,4 +71,9 @@ fun getAllpokemon(): Array<Pokemon>{
     }
 
     return allPokemon.toTypedArray()
+}
+
+fun getAllBalls(): List<String>{
+    val l = mutableListOf<String>()
+    return ballsDB.keys().asSequence().toList()
 }

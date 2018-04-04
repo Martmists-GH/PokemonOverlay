@@ -1,4 +1,3 @@
-import javafx.scene.paint.Color
 import tornadofx.*
 
 class PokemonStyle: Stylesheet() {
@@ -23,6 +22,7 @@ class PokemonStyle: Stylesheet() {
     init {
         App {
             prefHeight = 130.px
+            prefWidth = 930.px
             // backgroundColor += Color.RED
         }
 

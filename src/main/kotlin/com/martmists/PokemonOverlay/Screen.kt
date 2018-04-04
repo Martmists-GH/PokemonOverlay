@@ -1,13 +1,64 @@
 import javafx.event.EventHandler
-import javafx.scene.Node
 import javafx.scene.control.Button
+import javafx.scene.control.ComboBox
 import javafx.scene.control.Label
+import javafx.scene.control.TextField
 import javafx.scene.image.Image
 import javafx.scene.image.ImageView
 import javafx.scene.input.MouseEvent
 import javafx.scene.layout.BorderPane
-import javafx.scene.layout.Pane
+import javafx.scene.layout.HBox
 import tornadofx.*
+
+
+class EditPokemon(private val pos: Int, private val parent: View): View(){
+    override val root = form {
+        fieldset("Add Pokemon") {
+            field("Pokemon*") {
+                combobox(values = getAllPokemon().apply {sortBy { it.dexno } }.map { "${it.name} (#${it.dexno})" }) {
+                    makeAutocompletable()
+                }
+            }
+            field("Nickname") {
+                textfield()
+            }
+            field("Level*") {
+                textfield()
+            }
+            field("Pokeball*") {
+                combobox(values = getAllBalls()) {
+                    makeAutocompletable()
+                }
+            }
+            field("Item") {
+                textfield()
+            }
+
+            button("Save") {
+                action {
+                    save()
+                }
+            }
+        }
+    }
+
+    private fun save(){
+        parent as PokemonView
+        val info = Pokemon(5)
+        val s = root.children[0] as Fieldset
+        vals = mutableListOf<String>()
+        s.children.filterIsInstance<Field>().forEach {
+            it.children.forEach{
+                it as HBox
+                if (it.children[0] is ComboBox<*>) {
+                    it.children[0].get
+                }
+            }
+        }
+        parent.setPokemon(pos, info)
+        close()
+    }
+}
 
 
 class PokemonView: View() {
@@ -62,6 +113,10 @@ class PokemonView: View() {
                             layoutX = 190.0
                             text = "X"
                         }
+                        button {
+                            layoutX = 190.0
+                            text = "+"
+                        }
                     }
                 }
             }
@@ -102,88 +157,9 @@ class PokemonView: View() {
                             layoutX = 190.0
                             text = "X"
                         }
-                    }
-                }
-            }
-        }
-        vbox(5) {
-            addClass(PokemonStyle.Column)
-            borderpane {
-                addClass(PokemonStyle.Pokemon)
-
-                center {
-                    pane {
-                        addClass(PokemonStyle.Inner)
-                        imageview(getImage(empty.icon)).apply {
-                            layoutX = 10.0
-                            layoutY = 10.0
-                            addClass(PokemonStyle.PokemonIcon)
-                        }
-                        label {
-                            text = empty.nickname
-                            layoutX = 64.0
-                            layoutY = 12.0
-                            addClass(PokemonStyle.Nickname)
-                        }
-                        imageview(getImage("http://via.placeholder.com/24x24/f4f4f4/f4f4f4")).apply {
-                            layoutX = 60.0
-                            layoutY = 28.0
-                            addClass(PokemonStyle.ItemIcon)
-                        }
-                        label {
-                            text = empty.item
-                            layoutX = 64.0
-                            layoutY = 24.0
-                            addClass(PokemonStyle.ItemName)
-                        }
-                        imageview(getImage(empty.ball)) {
-                            layoutX = 34.0
-                            layoutY = 34.0
-                            addClass(PokemonStyle.PokeBall)
-                        }
                         button {
                             layoutX = 190.0
-                            text = "X"
-                        }
-                    }
-                }
-            }
-            borderpane {
-                addClass(PokemonStyle.Pokemon)
-
-                center {
-                    pane {
-                        addClass(PokemonStyle.Inner)
-                        imageview(getImage(empty.icon)).apply {
-                            layoutX = 10.0
-                            layoutY = 10.0
-                            addClass(PokemonStyle.PokemonIcon)
-                        }
-                        label {
-                            text = empty.nickname
-                            layoutX = 64.0
-                            layoutY = 12.0
-                            addClass(PokemonStyle.Nickname)
-                        }
-                        imageview(getImage("http://via.placeholder.com/24x24/f4f4f4/f4f4f4")).apply {
-                            layoutX = 60.0
-                            layoutY = 28.0
-                            addClass(PokemonStyle.ItemIcon)
-                        }
-                        label {
-                            text = empty.item
-                            layoutX = 64.0
-                            layoutY = 24.0
-                            addClass(PokemonStyle.ItemName)
-                        }
-                        imageview(getImage(empty.ball)) {
-                            layoutX = 34.0
-                            layoutY = 34.0
-                            addClass(PokemonStyle.PokeBall)
-                        }
-                        button {
-                            layoutX = 190.0
-                            text = "X"
+                            text = "+"
                         }
                     }
                 }
@@ -228,6 +204,10 @@ class PokemonView: View() {
                             layoutX = 190.0
                             text = "X"
                         }
+                        button {
+                            layoutX = 190.0
+                            text = "+"
+                        }
                     }
                 }
             }
@@ -267,6 +247,101 @@ class PokemonView: View() {
                         button {
                             layoutX = 190.0
                             text = "X"
+                        }
+                        button {
+                            layoutX = 190.0
+                            text = "+"
+                        }
+                    }
+                }
+            }
+        }
+        vbox(5) {
+            addClass(PokemonStyle.Column)
+            borderpane {
+                addClass(PokemonStyle.Pokemon)
+
+                center {
+                    pane {
+                        addClass(PokemonStyle.Inner)
+                        imageview(getImage(empty.icon)).apply {
+                            layoutX = 10.0
+                            layoutY = 10.0
+                            addClass(PokemonStyle.PokemonIcon)
+                        }
+                        label {
+                            text = empty.nickname
+                            layoutX = 64.0
+                            layoutY = 12.0
+                            addClass(PokemonStyle.Nickname)
+                        }
+                        imageview(getImage("http://via.placeholder.com/24x24/f4f4f4/f4f4f4")).apply {
+                            layoutX = 60.0
+                            layoutY = 28.0
+                            addClass(PokemonStyle.ItemIcon)
+                        }
+                        label {
+                            text = empty.item
+                            layoutX = 64.0
+                            layoutY = 24.0
+                            addClass(PokemonStyle.ItemName)
+                        }
+                        imageview(getImage(empty.ball)) {
+                            layoutX = 34.0
+                            layoutY = 34.0
+                            addClass(PokemonStyle.PokeBall)
+                        }
+                        button {
+                            layoutX = 190.0
+                            text = "X"
+                        }
+                        button {
+                            layoutX = 190.0
+                            text = "+"
+                        }
+                    }
+                }
+            }
+            borderpane {
+                addClass(PokemonStyle.Pokemon)
+
+                center {
+                    pane {
+                        addClass(PokemonStyle.Inner)
+                        imageview(getImage(empty.icon)).apply {
+                            layoutX = 10.0
+                            layoutY = 10.0
+                            addClass(PokemonStyle.PokemonIcon)
+                        }
+                        label {
+                            text = empty.nickname
+                            layoutX = 64.0
+                            layoutY = 12.0
+                            addClass(PokemonStyle.Nickname)
+                        }
+                        imageview(getImage("http://via.placeholder.com/24x24/f4f4f4/f4f4f4")).apply {
+                            layoutX = 60.0
+                            layoutY = 28.0
+                            addClass(PokemonStyle.ItemIcon)
+                        }
+                        label {
+                            text = empty.item
+                            layoutX = 64.0
+                            layoutY = 24.0
+                            addClass(PokemonStyle.ItemName)
+                        }
+                        imageview(getImage(empty.ball)) {
+                            layoutX = 34.0
+                            layoutY = 34.0
+                            addClass(PokemonStyle.PokeBall)
+                        }
+                        button {
+                            layoutX = 180.0
+                            text = "X"
+                        }
+                        button {
+                            layoutX = 180.0
+                            text = "+"
                         }
                     }
                 }
@@ -283,6 +358,7 @@ class PokemonView: View() {
                 it.addClass("row${j+1}")
                 it as BorderPane
                 it.center.getChildList()!![5].onMouseClicked = EventHandler<MouseEvent>{ _ -> removePokemon(i*2+j) }
+                it.center.getChildList()!![6].onMouseClicked = EventHandler<MouseEvent>{ _ -> menuPokemon(i*2+j) }
                 panes.add(it)
             }
         }
@@ -310,6 +386,7 @@ class PokemonView: View() {
             val nickname = children[1] as Label
             val itemname = children[3] as Label
             val buttonX = children[5] as Button
+            val buttonPlus = children[6] as Button
 
             pokeicon.image = getImage(pokemon.icon)
             ballicon.image = getImage(pokemon.ball)
@@ -319,6 +396,7 @@ class PokemonView: View() {
             itemicon.image = getImage(if (pokemon.item == "") "http://via.placeholder.com/24x24/f4f4f4/f4f4f4" else "https://cdn.bulbagarden.net/upload/d/d6/Held_icon_VII.png")
 
             buttonX.isVisible = (pokemon.nickname != "")
+            buttonPlus.isVisible = if (i > 0) panes.subList(0, i).filter { !it.center.getChildList()!![5].isVisible }.isEmpty() and !children[5].isVisible else pokemon.nickname == ""
         }
     }
 
@@ -328,7 +406,15 @@ class PokemonView: View() {
         update()
     }
 
-    fun removePokemon(pos: Int){
+    private fun menuPokemon(pos: Int){
+        val editScope = Scope()
+        val model = EditPokemon(pos, this)
+        setInScope(model, editScope)
+        find(EditPokemon::class, editScope).openWindow()
+
+    }
+
+    private fun removePokemon(pos: Int){
         pokes.removeAt(pos)
         pokes.add(empty)
         update()
