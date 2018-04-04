@@ -12,26 +12,44 @@ import tornadofx.*
 
 
 class EditPokemon(private val pos: Int, private val parent: View): View(){
+    var pokemon = SimpleStringProperty()
+    var nickname = ""
+    var ball = SimpleStringProperty()
+    var level = ""
+    var item = ""
+
     override val root = form {
         fieldset("Add Pokemon") {
             field("Pokemon*") {
-                combobox(values = getAllPokemon().apply {sortBy { it.dexno } }.map { "${it.name} (#${it.dexno})" }) {
+                combobox(pokemon, getAllPokemon().apply {sortBy { it.dexno } }.map { "${it.name} (#${it.dexno})" }) {
                     makeAutocompletable()
                 }
             }
             field("Nickname") {
-                textfield()
+                textfield {
+                    textProperty().addListener { _, _, new ->
+                        nickname = new
+                    }
+                }
             }
             field("Level*") {
-                textfield()
+                textfield {
+                    textProperty().addListener { _, _, new ->
+                        level = new
+                    }
+                }
             }
             field("Pokeball*") {
-                combobox(values = getAllBalls()) {
+                combobox(ball, getAllBalls()) {
                     makeAutocompletable()
                 }
             }
             field("Item") {
-                textfield()
+                textfield {
+                    textProperty().addListener { _, _, new ->
+                        item = new
+                    }
+                }
             }
 
             button("Save") {
@@ -44,18 +62,13 @@ class EditPokemon(private val pos: Int, private val parent: View): View(){
 
     private fun save(){
         parent as PokemonView
-        val info = Pokemon(5)
-        val s = root.children[0] as Fieldset
-        vals = mutableListOf<String>()
-        s.children.filterIsInstance<Field>().forEach {
-            it.children.forEach{
-                it as HBox
-                if (it.children[0] is ComboBox<*>) {
-                    it.children[0].get
-                }
-            }
+        val pokemon = Pokemon(pokemon).apply {
+            setPLevel(Int(level))
+            setPBall(ball)
+            setPItem(item)
+            setPName(nickname)
         }
-        parent.setPokemon(pos, info)
+        parent.setPokemon(pos, pokemon)
         close()
     }
 }
