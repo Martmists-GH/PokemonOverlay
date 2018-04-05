@@ -380,6 +380,14 @@
     ],
     "url": "https://archives.bulbagarden.net/media/upload/1/1a/150MS.png"
   },
+  "151": {
+    "name": "Mew",
+    "dexno": "151",
+    "types": [
+      "Psychic"
+    ],
+    "url": "https://cdn.bulbagarden.net/upload/a/a7/151MS.png"
+  },
   "042": {
     "name": "Golbat",
     "dexno": "042",
