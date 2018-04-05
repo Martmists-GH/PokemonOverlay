@@ -1,5 +1,7 @@
 package com.martmists.PokemonOverlay
 
+import javafx.scene.effect.BlurType
+import javafx.scene.effect.DropShadow
 import javafx.scene.layout.BorderStrokeStyle
 import javafx.scene.paint.Color
 import tornadofx.*
@@ -105,17 +107,39 @@ class PokemonStyle: Stylesheet() {
             prefWidth = 500.px
         }
 
-        s(EditPokemon, EditNickname, EditLevel, EditBall, EditItem, EditSave) {
+        s(EditPokemon, EditNickname, EditLevel, EditBall, EditItem) {
             prefWidth = 360.px
         }
 
-        s(button, comboBox) {
+        EditSave {
+            prefWidth = 340.px
+        }
+
+        s(button, comboBox, textField) {
             backgroundRadius += box(15.px)
+            effect = DropShadow().apply {
+                color = Color.GRAY
+                offsetX = 2.0
+                offsetY = 3.0
+                radius = 0.0
+            }
+
+            focusColor = Color.TRANSPARENT
+            faintFocusColor = Color.TRANSPARENT
+
+            and(hover, focused, selected) {
+                focusColor = Color.TRANSPARENT
+                faintFocusColor = Color.TRANSPARENT
+            }
         }
 
         s(comboBox, textField) {
             prefWidth = 255.px
             maxWidth = 255.px
+        }
+
+        EditApp {
+            backgroundImage += ClassLoader.getSystemResource("editScreen.png").toURI()
         }
     }
 }

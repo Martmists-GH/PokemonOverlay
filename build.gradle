@@ -12,7 +12,7 @@ buildscript {
 }
 
 group 'info.overlay.pokemon'
-version 'v0.1-beta.1'
+version 'v0.1-beta.2'
 
 apply plugin: 'kotlin'
 apply plugin: 'idea'

@@ -72,31 +72,31 @@ class PokemonView : View() {
                             addClass(PokemonStyle.Type2)
                         }
                         button {
-                            layoutX = 275.0
-                            layoutY = 6.0
+                            layoutX = 270.0
+                            layoutY = 4.0
                             text = "X"
                             addClass(PokemonStyle.XButton)
                         }
                         button {
-                            layoutX = 275.0
-                            layoutY = 6.0
+                            layoutX = 270.0
+                            layoutY = 4.0
                             text = "+"
                             addClass(PokemonStyle.PlusButton)
                         }
                         button {
-                            layoutX = 250.0
-                            layoutY = 3.0
+                            layoutX = 210.0
+                            layoutY = 25.0
                             text = "+"
                             addClass(PokemonStyle.LevelPlusButton)
                         }
                         button {
-                            layoutX = 250.0
-                            layoutY = 30.0
+                            layoutX = 240.0
+                            layoutY = 25.0
                             text = "-"
                             addClass(PokemonStyle.LevelMinusButton)
                         }
                         button {
-                            layoutX = 275.0
+                            layoutX = 270.0
                             layoutY = 26.0
                             text = "\u270e"
                             addClass(PokemonStyle.EditButton)
@@ -148,186 +148,31 @@ class PokemonView : View() {
                             addClass(PokemonStyle.Type2)
                         }
                         button {
-                            layoutX = 275.0
-                            layoutY = 6.0
+                            layoutX = 270.0
+                            layoutY = 4.0
                             text = "X"
                             addClass(PokemonStyle.XButton)
                         }
                         button {
-                            layoutX = 275.0
-                            layoutY = 6.0
+                            layoutX = 270.0
+                            layoutY = 4.0
                             text = "+"
                             addClass(PokemonStyle.PlusButton)
                         }
                         button {
-                            layoutX = 250.0
-                            layoutY = 3.0
+                            layoutX = 210.0
+                            layoutY = 25.0
                             text = "+"
                             addClass(PokemonStyle.LevelPlusButton)
                         }
                         button {
-                            layoutX = 250.0
-                            layoutY = 30.0
+                            layoutX = 240.0
+                            layoutY = 25.0
                             text = "-"
                             addClass(PokemonStyle.LevelMinusButton)
                         }
                         button {
-                            layoutX = 275.0
-                            layoutY = 26.0
-                            text = "\u270e"
-                            addClass(PokemonStyle.EditButton)
-                        }
-                    }
-                }
-            }
-        }
-        vbox(15) {
-            addClass(PokemonStyle.Column)
-            borderpane {
-                addClass(PokemonStyle.Pokemon)
-
-                center {
-                    pane {
-                        addClass(PokemonStyle.Inner)
-                        imageview(getImage(empty.icon)).apply {
-                            layoutX = 10.0
-                            layoutY = 10.0
-                            addClass(PokemonStyle.PokemonIcon)
-                        }
-                        label {
-                            text = empty.nickname
-                            layoutX = 64.0
-                            layoutY = 5.0
-                            addClass(PokemonStyle.Nickname)
-                        }
-                        imageview().apply {
-                            layoutX = 65.0
-                            layoutY = 40.0
-                            addClass(PokemonStyle.ItemIcon)
-                        }
-                        label {
-                            text = empty.item
-                            layoutX = 67.0
-                            layoutY = 37.0
-                            addClass(PokemonStyle.ItemName)
-                        }
-                        imageview(getImage(empty.ball)) {
-                            layoutX = 34.0
-                            layoutY = 34.0
-                            addClass(PokemonStyle.PokeBall)
-                        }
-                        imageview(placeholder).apply {
-                            layoutX = 64.0
-                            layoutY = 21.0
-                            addClass(PokemonStyle.Type1)
-                        }
-                        imageview(placeholder).apply {
-                            layoutX = 114.0
-                            layoutY = 21.0
-                            addClass(PokemonStyle.Type2)
-                        }
-                        button {
-                            layoutX = 275.0
-                            layoutY = 6.0
-                            text = "X"
-                            addClass(PokemonStyle.XButton)
-                        }
-                        button {
-                            layoutX = 275.0
-                            layoutY = 6.0
-                            text = "+"
-                            addClass(PokemonStyle.PlusButton)
-                        }
-                        button {
-                            layoutX = 250.0
-                            layoutY = 3.0
-                            text = "+"
-                            addClass(PokemonStyle.LevelPlusButton)
-                        }
-                        button {
-                            layoutX = 250.0
-                            layoutY = 30.0
-                            text = "-"
-                            addClass(PokemonStyle.LevelMinusButton)
-                        }
-                        button {
-                            layoutX = 275.0
-                            layoutY = 26.0
-                            text = "\u270e"
-                            addClass(PokemonStyle.EditButton)
-                        }
-                    }
-                }
-            }
-            borderpane {
-                addClass(PokemonStyle.Pokemon)
-
-                center {
-                    pane {
-                        addClass(PokemonStyle.Inner)
-                        imageview(getImage(empty.icon)).apply {
-                            layoutX = 10.0
-                            layoutY = 10.0
-                            addClass(PokemonStyle.PokemonIcon)
-                        }
-                        label {
-                            text = empty.nickname
-                            layoutX = 64.0
-                            layoutY = 5.0
-                            addClass(PokemonStyle.Nickname)
-                        }
-                        imageview().apply {
-                            layoutX = 65.0
-                            layoutY = 40.0
-                            addClass(PokemonStyle.ItemIcon)
-                        }
-                        label {
-                            text = empty.item
-                            layoutX = 67.0
-                            layoutY = 37.0
-                            addClass(PokemonStyle.ItemName)
-                        }
-                        imageview(getImage(empty.ball)) {
-                            layoutX = 34.0
-                            layoutY = 34.0
-                            addClass(PokemonStyle.PokeBall)
-                        }
-                        imageview(placeholder).apply {
-                            layoutX = 64.0
-                            layoutY = 21.0
-                            addClass(PokemonStyle.Type1)
-                        }
-                        imageview(placeholder).apply {
-                            layoutX = 114.0
-                            layoutY = 21.0
-                            addClass(PokemonStyle.Type2)
-                        }
-                        button {
-                            layoutX = 275.0
-                            layoutY = 6.0
-                            text = "X"
-                            addClass(PokemonStyle.XButton)
-                        }
-                        button {
-                            layoutX = 275.0
-                            layoutY = 6.0
-                            text = "+"
-                            addClass(PokemonStyle.PlusButton)
-                        }
-                        button {
-                            layoutX = 250.0
-                            layoutY = 3.0
-                            text = "+"
-                            addClass(PokemonStyle.LevelPlusButton)
-                        }
-                        button {
-                            layoutX = 250.0
-                            layoutY = 30.0
-                            text = "-"
-                            addClass(PokemonStyle.LevelMinusButton)
-                        }
-                        button {
-                            layoutX = 275.0
+                            layoutX = 270.0
                             layoutY = 26.0
                             text = "\u270e"
                             addClass(PokemonStyle.EditButton)
@@ -382,31 +227,31 @@ class PokemonView : View() {
                             addClass(PokemonStyle.Type2)
                         }
                         button {
-                            layoutX = 275.0
-                            layoutY = 6.0
+                            layoutX = 270.0
+                            layoutY = 4.0
                             text = "X"
                             addClass(PokemonStyle.XButton)
                         }
                         button {
-                            layoutX = 275.0
-                            layoutY = 6.0
+                            layoutX = 270.0
+                            layoutY = 4.0
                             text = "+"
                             addClass(PokemonStyle.PlusButton)
                         }
                         button {
-                            layoutX = 250.0
-                            layoutY = 3.0
+                            layoutX = 210.0
+                            layoutY = 25.0
                             text = "+"
                             addClass(PokemonStyle.LevelPlusButton)
                         }
                         button {
-                            layoutX = 250.0
-                            layoutY = 30.0
+                            layoutX = 240.0
+                            layoutY = 25.0
                             text = "-"
                             addClass(PokemonStyle.LevelMinusButton)
                         }
                         button {
-                            layoutX = 275.0
+                            layoutX = 270.0
                             layoutY = 26.0
                             text = "\u270e"
                             addClass(PokemonStyle.EditButton)
@@ -458,31 +303,186 @@ class PokemonView : View() {
                             addClass(PokemonStyle.Type2)
                         }
                         button {
-                            layoutX = 275.0
-                            layoutY = 6.0
+                            layoutX = 270.0
+                            layoutY = 4.0
                             text = "X"
                             addClass(PokemonStyle.XButton)
                         }
                         button {
-                            layoutX = 275.0
-                            layoutY = 6.0
+                            layoutX = 270.0
+                            layoutY = 4.0
                             text = "+"
                             addClass(PokemonStyle.PlusButton)
                         }
                         button {
-                            layoutX = 250.0
-                            layoutY = 3.0
+                            layoutX = 210.0
+                            layoutY = 25.0
                             text = "+"
                             addClass(PokemonStyle.LevelPlusButton)
                         }
                         button {
-                            layoutX = 250.0
-                            layoutY = 30.0
+                            layoutX = 240.0
+                            layoutY = 25.0
                             text = "-"
                             addClass(PokemonStyle.LevelMinusButton)
                         }
                         button {
-                            layoutX = 275.0
+                            layoutX = 270.0
+                            layoutY = 26.0
+                            text = "\u270e"
+                            addClass(PokemonStyle.EditButton)
+                        }
+                    }
+                }
+            }
+        }
+        vbox(15) {
+            addClass(PokemonStyle.Column)
+            borderpane {
+                addClass(PokemonStyle.Pokemon)
+
+                center {
+                    pane {
+                        addClass(PokemonStyle.Inner)
+                        imageview(getImage(empty.icon)).apply {
+                            layoutX = 10.0
+                            layoutY = 10.0
+                            addClass(PokemonStyle.PokemonIcon)
+                        }
+                        label {
+                            text = empty.nickname
+                            layoutX = 64.0
+                            layoutY = 5.0
+                            addClass(PokemonStyle.Nickname)
+                        }
+                        imageview().apply {
+                            layoutX = 65.0
+                            layoutY = 40.0
+                            addClass(PokemonStyle.ItemIcon)
+                        }
+                        label {
+                            text = empty.item
+                            layoutX = 67.0
+                            layoutY = 37.0
+                            addClass(PokemonStyle.ItemName)
+                        }
+                        imageview(getImage(empty.ball)) {
+                            layoutX = 34.0
+                            layoutY = 34.0
+                            addClass(PokemonStyle.PokeBall)
+                        }
+                        imageview(placeholder).apply {
+                            layoutX = 64.0
+                            layoutY = 21.0
+                            addClass(PokemonStyle.Type1)
+                        }
+                        imageview(placeholder).apply {
+                            layoutX = 114.0
+                            layoutY = 21.0
+                            addClass(PokemonStyle.Type2)
+                        }
+                        button {
+                            layoutX = 270.0
+                            layoutY = 4.0
+                            text = "X"
+                            addClass(PokemonStyle.XButton)
+                        }
+                        button {
+                            layoutX = 270.0
+                            layoutY = 4.0
+                            text = "+"
+                            addClass(PokemonStyle.PlusButton)
+                        }
+                        button {
+                            layoutX = 210.0
+                            layoutY = 25.0
+                            text = "+"
+                            addClass(PokemonStyle.LevelPlusButton)
+                        }
+                        button {
+                            layoutX = 240.0
+                            layoutY = 25.0
+                            text = "-"
+                            addClass(PokemonStyle.LevelMinusButton)
+                        }
+                        button {
+                            layoutX = 270.0
+                            layoutY = 26.0
+                            text = "\u270e"
+                            addClass(PokemonStyle.EditButton)
+                        }
+                    }
+                }
+            }
+            borderpane {
+                addClass(PokemonStyle.Pokemon)
+
+                center {
+                    pane {
+                        addClass(PokemonStyle.Inner)
+                        imageview(getImage(empty.icon)).apply {
+                            layoutX = 10.0
+                            layoutY = 10.0
+                            addClass(PokemonStyle.PokemonIcon)
+                        }
+                        label {
+                            text = empty.nickname
+                            layoutX = 64.0
+                            layoutY = 5.0
+                            addClass(PokemonStyle.Nickname)
+                        }
+                        imageview().apply {
+                            layoutX = 65.0
+                            layoutY = 40.0
+                            addClass(PokemonStyle.ItemIcon)
+                        }
+                        label {
+                            text = empty.item
+                            layoutX = 67.0
+                            layoutY = 37.0
+                            addClass(PokemonStyle.ItemName)
+                        }
+                        imageview(getImage(empty.ball)) {
+                            layoutX = 34.0
+                            layoutY = 34.0
+                            addClass(PokemonStyle.PokeBall)
+                        }
+                        imageview(placeholder).apply {
+                            layoutX = 64.0
+                            layoutY = 21.0
+                            addClass(PokemonStyle.Type1)
+                        }
+                        imageview(placeholder).apply {
+                            layoutX = 114.0
+                            layoutY = 21.0
+                            addClass(PokemonStyle.Type2)
+                        }
+                        button {
+                            layoutX = 270.0
+                            layoutY = 4.0
+                            text = "X"
+                            addClass(PokemonStyle.XButton)
+                        }
+                        button {
+                            layoutX = 270.0
+                            layoutY = 4.0
+                            text = "+"
+                            addClass(PokemonStyle.PlusButton)
+                        }
+                        button {
+                            layoutX = 210.0
+                            layoutY = 25.0
+                            text = "+"
+                            addClass(PokemonStyle.LevelPlusButton)
+                        }
+                        button {
+                            layoutX = 240.0
+                            layoutY = 25.0
+                            text = "-"
+                            addClass(PokemonStyle.LevelMinusButton)
+                        }
+                        button {
+                            layoutX = 270.0
                             layoutY = 26.0
                             text = "\u270e"
                             addClass(PokemonStyle.EditButton)
