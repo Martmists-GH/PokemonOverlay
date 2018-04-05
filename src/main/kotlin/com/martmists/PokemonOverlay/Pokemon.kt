@@ -1,11 +1,10 @@
 package com.martmists.PokemonOverlay
 
 import org.json.JSONObject
-import java.io.File
 
-val pokemonDB = JSONObject(File("out.json").readText())
-val ballsDB = JSONObject(File("balls.json").readText())
-val typesDB = JSONObject(File("types.json").readText())
+val pokemonDB = JSONObject(ClassLoader.getSystemResource("out.json").readText())
+val ballsDB = JSONObject(ClassLoader.getSystemResource("balls.json").readText())
+val typesDB = JSONObject(ClassLoader.getSystemResource("types.json").readText())
 
 
 class Pokemon(id: Any) {
