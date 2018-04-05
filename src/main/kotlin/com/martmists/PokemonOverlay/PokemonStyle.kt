@@ -42,9 +42,11 @@ class PokemonStyle: Stylesheet() {
 
     init {
         App {
-            prefHeight = 205.px
+            prefHeight = 215.px
             prefWidth = 1305.px
             padding = box(40.px)
+
+            backgroundImage += ClassLoader.getSystemResource("overlay.png").toURI()
             // backgroundColor += Color.RED
         }
 
@@ -61,8 +63,10 @@ class PokemonStyle: Stylesheet() {
 
         Inner {
             borderStyle += BorderStrokeStyle.SOLID
-            borderWidth += box(2.px)
+            borderWidth += box(3.px)
             borderRadius += box(40.px)
+
+            backgroundImage += ClassLoader.getSystemResource("pokemonBack2.png").toURI()
             // backgroundColor += Color.GREEN
         }
 
@@ -97,7 +101,11 @@ class PokemonStyle: Stylesheet() {
             baseColor = Color.GREEN
         }
 
-        s(EditApp, EditPokemon, EditNickname, EditLevel, EditBall, EditItem, EditSave) {
+        EditApp {
+            prefWidth = 500.px
+        }
+
+        s(EditPokemon, EditNickname, EditLevel, EditBall, EditItem, EditSave) {
             prefWidth = 360.px
         }
 
@@ -105,8 +113,9 @@ class PokemonStyle: Stylesheet() {
             backgroundRadius += box(15.px)
         }
 
-        comboBox {
+        s(comboBox, textField) {
             prefWidth = 255.px
+            maxWidth = 255.px
         }
     }
 }

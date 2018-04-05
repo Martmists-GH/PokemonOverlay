@@ -10,19 +10,23 @@ import javafx.scene.layout.BorderPane
 import tornadofx.*
 
 class PokemonView : View() {
-    val empty = Pokemon(0)
+    private val empty = Pokemon(0)
+    private val cache = mutableMapOf<String, Image>()
+    private val placeholder = getImage("http://via.placeholder.com/0x0/f4f4f4/f4f4f4")
 
     private fun getImage(url: String): Image {
-        val req = Http.get(url)
-
-        val body = req.body()!!.byteStream()
-
-        return Image(body)
+        if (cache.containsKey(url)) {
+            return cache.getValue(url)
+        } else {
+            val img = Image(Http.get(url).body()!!.byteStream())
+            cache[url] = img
+            return img
+        }
     }
 
     override val root = hbox(5) {
         addClass(PokemonStyle.App)
-        vbox(5) {
+        vbox(15) {
             addClass(PokemonStyle.Column)
             borderpane {
                 addClass(PokemonStyle.Pokemon)
@@ -41,7 +45,7 @@ class PokemonView : View() {
                             layoutY = 5.0
                             addClass(PokemonStyle.Nickname)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview().apply {
                             layoutX = 65.0
                             layoutY = 40.0
                             addClass(PokemonStyle.ItemIcon)
@@ -57,12 +61,12 @@ class PokemonView : View() {
                             layoutY = 34.0
                             addClass(PokemonStyle.PokeBall)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview(placeholder).apply {
                             layoutX = 64.0
                             layoutY = 21.0
                             addClass(PokemonStyle.Type1)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview(placeholder).apply {
                             layoutX = 114.0
                             layoutY = 21.0
                             addClass(PokemonStyle.Type2)
@@ -117,7 +121,7 @@ class PokemonView : View() {
                             layoutY = 5.0
                             addClass(PokemonStyle.Nickname)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview().apply {
                             layoutX = 65.0
                             layoutY = 40.0
                             addClass(PokemonStyle.ItemIcon)
@@ -133,12 +137,12 @@ class PokemonView : View() {
                             layoutY = 34.0
                             addClass(PokemonStyle.PokeBall)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview(placeholder).apply {
                             layoutX = 64.0
                             layoutY = 21.0
                             addClass(PokemonStyle.Type1)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview(placeholder).apply {
                             layoutX = 114.0
                             layoutY = 21.0
                             addClass(PokemonStyle.Type2)
@@ -177,7 +181,7 @@ class PokemonView : View() {
                 }
             }
         }
-        vbox(5) {
+        vbox(15) {
             addClass(PokemonStyle.Column)
             borderpane {
                 addClass(PokemonStyle.Pokemon)
@@ -196,7 +200,7 @@ class PokemonView : View() {
                             layoutY = 5.0
                             addClass(PokemonStyle.Nickname)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview().apply {
                             layoutX = 65.0
                             layoutY = 40.0
                             addClass(PokemonStyle.ItemIcon)
@@ -212,12 +216,12 @@ class PokemonView : View() {
                             layoutY = 34.0
                             addClass(PokemonStyle.PokeBall)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview(placeholder).apply {
                             layoutX = 64.0
                             layoutY = 21.0
                             addClass(PokemonStyle.Type1)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview(placeholder).apply {
                             layoutX = 114.0
                             layoutY = 21.0
                             addClass(PokemonStyle.Type2)
@@ -272,7 +276,7 @@ class PokemonView : View() {
                             layoutY = 5.0
                             addClass(PokemonStyle.Nickname)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview().apply {
                             layoutX = 65.0
                             layoutY = 40.0
                             addClass(PokemonStyle.ItemIcon)
@@ -288,12 +292,12 @@ class PokemonView : View() {
                             layoutY = 34.0
                             addClass(PokemonStyle.PokeBall)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview(placeholder).apply {
                             layoutX = 64.0
                             layoutY = 21.0
                             addClass(PokemonStyle.Type1)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview(placeholder).apply {
                             layoutX = 114.0
                             layoutY = 21.0
                             addClass(PokemonStyle.Type2)
@@ -332,7 +336,7 @@ class PokemonView : View() {
                 }
             }
         }
-        vbox(5) {
+        vbox(15) {
             addClass(PokemonStyle.Column)
             borderpane {
                 addClass(PokemonStyle.Pokemon)
@@ -351,7 +355,7 @@ class PokemonView : View() {
                             layoutY = 5.0
                             addClass(PokemonStyle.Nickname)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview().apply {
                             layoutX = 65.0
                             layoutY = 40.0
                             addClass(PokemonStyle.ItemIcon)
@@ -367,12 +371,12 @@ class PokemonView : View() {
                             layoutY = 34.0
                             addClass(PokemonStyle.PokeBall)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview(placeholder).apply {
                             layoutX = 64.0
                             layoutY = 21.0
                             addClass(PokemonStyle.Type1)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview(placeholder).apply {
                             layoutX = 114.0
                             layoutY = 21.0
                             addClass(PokemonStyle.Type2)
@@ -427,7 +431,7 @@ class PokemonView : View() {
                             layoutY = 5.0
                             addClass(PokemonStyle.Nickname)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview().apply {
                             layoutX = 65.0
                             layoutY = 40.0
                             addClass(PokemonStyle.ItemIcon)
@@ -443,12 +447,12 @@ class PokemonView : View() {
                             layoutY = 34.0
                             addClass(PokemonStyle.PokeBall)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview(placeholder).apply {
                             layoutX = 64.0
                             layoutY = 21.0
                             addClass(PokemonStyle.Type1)
                         }
-                        imageview(getImage("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")).apply {
+                        imageview(placeholder).apply {
                             layoutX = 114.0
                             layoutY = 21.0
                             addClass(PokemonStyle.Type2)
@@ -580,7 +584,7 @@ class PokemonView : View() {
         nickname.text = if (pokemon.nickname != "") "${pokemon.nickname} Lv.${pokemon.level}" else ""
         itemname.text = pokemon.item
 
-        itemicon.image = getImage(if (pokemon.item == "") "http://via.placeholder.com/1x1/f4f4f4/f4f4f4" else "https://cdn.bulbagarden.net/upload/d/d6/Held_icon_VII.png")
+        itemicon.image = if (pokemon.item == "") placeholder else getImage("https://cdn.bulbagarden.net/upload/d/d6/Held_icon_VII.png")
 
         typeImage1.image = getImage(pokemon.types[0])
         typeImage2.image = getImage(pokemon.types[1])

@@ -30,17 +30,17 @@ class Pokemon(id: Any) {
             }
 
             if (types.size == 1){
-                types.add("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")
+                types.add("http://via.placeholder.com/0x0/f4f4f4/f4f4f4")
             }
 
             name = json.getString("name")
             nickname = name
             icon = json.getString("url")
         } else {
-            icon = "http://via.placeholder.com/1x1/f4f4f4/f4f4f4"
-            ball = "http://via.placeholder.com/1x1/f4f4f4/f4f4f4"
-            types.add("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")
-            types.add("http://via.placeholder.com/1x1/f4f4f4/f4f4f4")
+            icon = "http://via.placeholder.com/0x0/f4f4f4/f4f4f4"
+            ball = "http://via.placeholder.com/0x0/f4f4f4/f4f4f4"
+            types.add("http://via.placeholder.com/0x0/f4f4f4/f4f4f4")
+            types.add("http://via.placeholder.com/0x0/f4f4f4/f4f4f4")
         }
     }
 
