@@ -63,7 +63,7 @@ eval $(echo "$response" | grep -m 1 "id.:" | grep -w id | tr : = | tr -cd '[[:al
 # Create tag
 echo "Creating tag... "
 
-curl -X POST -H "Content-Type: application/json" -H "$AUTH" -d '{"tag_name":"$tag","name":"$(git log --oneline -1)"}' "$GH_RELEASE"
+curl -X POST -H "Content-Type: application/json" -H "$AUTH" -d "{\"tag_name\":\"$tag\",\"name\":\"$(git log --oneline -1)\"}" "$GH_RELEASE"
 
 # Upload asset
 echo "Uploading asset... "
