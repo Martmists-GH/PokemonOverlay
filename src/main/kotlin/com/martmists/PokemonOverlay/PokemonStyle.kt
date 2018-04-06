@@ -1,6 +1,5 @@
 package com.martmists.PokemonOverlay
 
-import javafx.scene.effect.BlurType
 import javafx.scene.effect.DropShadow
 import javafx.scene.layout.BorderStrokeStyle
 import javafx.scene.paint.Color
