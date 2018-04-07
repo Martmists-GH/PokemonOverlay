@@ -6936,5 +6936,84 @@
       "Electric"
     ],
     "url": "https://archives.bulbagarden.net/media/upload/f/ff/807MS.png"
-  }
+  },
+  "244": {
+    "name": "Entei",
+    "dexno": "244",
+    "types": [
+      "Fire"
+    ],
+    "url": "https://archives.bulbagarden.net/media/upload/4/4e/244MS.png"
+  },
+  "245": {
+    "name": "Suicune",
+    "dexno": "245",
+    "types": [
+      "Water"
+    ],
+    "url": "https://archives.bulbagarden.net/media/upload/e/ea/245MS.png"
+  },
+  "251": {
+    "name": "Celebi",
+    "dexno": "251",
+    "types": [
+      "Psychic",
+      "Grass"
+    ],
+    "url": "https://archives.bulbagarden.net/media/upload/5/5a/251MS.png"
+  },
+  "543": {
+    "name": "Venipede",
+    "dexno": "543",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "url": "https://archives.bulbagarden.net/media/upload/2/2c/543MS.png"
+  },
+  "544": {
+    "name": "Whirlipede",
+    "dexno": "544",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "url": "https://archives.bulbagarden.net/media/upload/b/ba/544MS.png"
+  },
+  "545": {
+    "name": "Scolipede",
+    "dexno": "545",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "url": "https://archives.bulbagarden.net/media/upload/d/d3/545MS.png"
+  },
+  "607": {
+    "name": "Litwick",
+    "dexno": "607",
+    "types": [
+      "Ghost",
+      "Fire"
+    ],
+    "url": "https://archives.bulbagarden.net/media/upload/7/7c/607MS.png"
+  },
+  "608": {
+    "name": "Lampent",
+    "dexno": "608",
+    "types": [
+      "Ghost",
+      "Fire"
+    ],
+    "url": "https://archives.bulbagarden.net/media/upload/0/04/608MS.png"
+  },
+  "609": {
+    "name": "Chandelure",
+    "dexno": "609",
+    "types": [
+      "Ghost",
+      "Fire"
+    ],
+    "url": "https://archives.bulbagarden.net/media/upload/3/39/609MS.png"
+  }  
 }
