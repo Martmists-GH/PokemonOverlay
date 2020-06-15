@@ -10,7 +10,6 @@ fun main(args: Array<String>) {
         println("Invalid java version, use JRE 8 instead!")
         exitProcess(1)
     }
-
     val screen = PokemonApp()
 
     Application.launch(screen::class.java, *args)

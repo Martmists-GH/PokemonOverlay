@@ -79,6 +79,7 @@ class PokemonStyle: Stylesheet() {
         ItemName {
             scaleX = 0.8
             scaleY = 0.8
+            padding = box(0.px, 0.px, 0.px, 0.px)
         }
 
         row1 {

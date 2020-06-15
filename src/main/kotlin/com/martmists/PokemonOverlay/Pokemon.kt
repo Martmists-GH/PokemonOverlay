@@ -14,7 +14,7 @@ class Pokemon(id: Any) {
     var icon = ""
     var dexno = ""
     var types = mutableListOf<String>()
-    var ball = ""
+    var ball = "https://cdn.bulbagarden.net/upload/9/93/Bag_Pok%C3%A9_Ball_Sprite.png"
     var item = ""
 
     init {
