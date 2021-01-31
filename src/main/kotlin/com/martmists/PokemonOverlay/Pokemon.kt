@@ -35,7 +35,7 @@ class Pokemon(id: Any) {
 
             name = json.getString("name")
             nickname = name
-            icon = json.getString("url")
+            icon = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + json.getString("dexno") + ".png"
         } else {
             icon = "http://via.placeholder.com/0x0/f4f4f4/f4f4f4"
             ball = "http://via.placeholder.com/0x0/f4f4f4/f4f4f4"
