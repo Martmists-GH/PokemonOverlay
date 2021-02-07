@@ -72,8 +72,8 @@ class PokemonStyle: Stylesheet() {
         }
 
         PokemonIcon {
-            scaleX = 1.75
-            scaleY = 1.75
+            scaleX = 0.75
+            scaleY = 0.75
         }
 
         ItemName {

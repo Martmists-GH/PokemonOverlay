@@ -39,8 +39,8 @@ class PokemonView : View() {
                     pane {
                         addClass(PokemonStyle.Inner)
                         imageview(getImage(empty.icon)).apply {
-                            layoutX = 10.0
-                            layoutY = 10.0
+                            layoutX = -17.0
+                            layoutY = -17.0
                             addClass(PokemonStyle.PokemonIcon)
                         }
                         label {
@@ -117,8 +117,8 @@ class PokemonView : View() {
                     pane {
                         addClass(PokemonStyle.Inner)
                         imageview(getImage(empty.icon)).apply {
-                            layoutX = 10.0
-                            layoutY = 10.0
+                            layoutX = -17.0
+                            layoutY = -17.0
                             addClass(PokemonStyle.PokemonIcon)
                         }
                         label {
@@ -198,8 +198,8 @@ class PokemonView : View() {
                     pane {
                         addClass(PokemonStyle.Inner)
                         imageview(getImage(empty.icon)).apply {
-                            layoutX = 10.0
-                            layoutY = 10.0
+                            layoutX = -17.0
+                            layoutY = -17.0
                             addClass(PokemonStyle.PokemonIcon)
                         }
                         label {
@@ -276,8 +276,8 @@ class PokemonView : View() {
                     pane {
                         addClass(PokemonStyle.Inner)
                         imageview(getImage(empty.icon)).apply {
-                            layoutX = 10.0
-                            layoutY = 10.0
+                            layoutX = -17.0
+                            layoutY = -17.0
                             addClass(PokemonStyle.PokemonIcon)
                         }
                         label {
@@ -357,8 +357,8 @@ class PokemonView : View() {
                     pane {
                         addClass(PokemonStyle.Inner)
                         imageview(getImage(empty.icon)).apply {
-                            layoutX = 10.0
-                            layoutY = 10.0
+                            layoutX = -17.0
+                            layoutY = -17.0
                             addClass(PokemonStyle.PokemonIcon)
                         }
                         label {
@@ -435,8 +435,8 @@ class PokemonView : View() {
                     pane {
                         addClass(PokemonStyle.Inner)
                         imageview(getImage(empty.icon)).apply {
-                            layoutX = 10.0
-                            layoutY = 10.0
+                            layoutX = -17.0
+                            layoutY = -17.0
                             addClass(PokemonStyle.PokemonIcon)
                         }
                         label {
